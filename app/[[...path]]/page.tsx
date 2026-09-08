@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Storefront from '../storefront';
-import { categories, getProduct } from '@/lib/shop';
+import { categories, getProduct, products } from '@/lib/shop';
 const titles: Record<string, string> = {
   productos: 'Todos los productos',
   nosotros: 'Nuestro universo',
@@ -13,6 +13,15 @@ const titles: Record<string, string> = {
   carrito: 'Tu carrito',
   pedido: 'Completa tu pedido',
 };
+
+export function generateStaticParams() {
+  return [
+    {},
+    ...Object.keys(titles).map((path) => ({ path: [path] })),
+    ...categories.map((category) => ({ path: ['productos', category.id] })),
+    ...products.map((product) => ({ path: ['producto', product.id] })),
+  ];
+}
 export async function generateMetadata({
   params,
 }: {
