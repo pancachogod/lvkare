@@ -1,10 +1,12 @@
 export const shop = {
   name: 'LVKARE',
   // Añadir el número con indicativo, solo dígitos. Ejemplo de formato: 57 + número móvil.
-  whatsappNumber: '',
+  whatsappNumber: '573185555731',
+  secondaryWhatsappNumber: '573164549547',
+  instagram: '@lvkarecuidadoancestral',
   currency: 'COP',
 };
-export type Category = 'cabello' | 'cuerpo' | 'fragancias' | 'kits';
+export type Category = 'cabello' | 'cuerpo' | 'fragancias' | 'kits' | 'maquillaje';
 export const categories: { id: Category; name: string; intro: string }[] = [
   {
     id: 'cabello',
@@ -25,6 +27,11 @@ export const categories: { id: Category; name: string; intro: string }[] = [
     id: 'kits',
     name: 'Kits & rituales',
     intro: 'Pequeños rituales que se disfrutan mejor juntos.',
+  },
+  {
+    id: 'maquillaje',
+    name: 'Maquillaje',
+    intro: 'Color, textura y pequeños detalles para expresarte a tu manera.',
   },
 ];
 export interface Product {
@@ -177,6 +184,66 @@ export const products: Product[] = [
       { label: '150 ml', extra: 0 },
       { label: '250 ml', extra: 13000 },
     ],
+  },
+  {
+    id: 'contorno-en-barra', name: 'Contorno en barra', category: 'maquillaje', subtitle: 'Bronceador cremoso con vitaminas', price: 10500, image: '/images/makeup/08.png', label: 'MAQUILLAJE',
+    description: 'Bronceador cremoso con vitaminas para definir y dar calidez al rostro.', use: 'Aplica directamente o con brocha en pómulos, frente y mandíbula. Difumina hasta lograr la intensidad que prefieras.', notes: ['Textura cremosa', 'Con vitaminas', 'Fácil de difuminar'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'tinta-difuminar', name: 'Tinta para difuminar', category: 'maquillaje', subtitle: 'Ideal para labios y mejillas', price: 9000, image: '/images/makeup/02.png', label: 'MAQUILLAJE',
+    description: 'Tinta versátil para dar un toque de color natural a labios y mejillas.', use: 'Coloca pequeños puntos sobre labios o mejillas y difumina con los dedos o una brocha.', notes: ['Para labios y mejillas', 'Color modulable', 'Acabado natural'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'rubor-en-barra', name: 'Rubor en barra', category: 'maquillaje', subtitle: 'Realza mejillas, labios y ojos', price: 10000, image: '/images/makeup/16.png', label: 'MAQUILLAJE',
+    description: 'Un rubor en barra para aportar color y vida a mejillas, labios y ojos.', use: 'Aplica una pequeña cantidad y difumina. Puedes construir el color en capas.', notes: ['Uso multi-zona', 'Textura cremosa', 'Color construible'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'tinta-gelatina', name: 'Tinta en gelatina', category: 'maquillaje', subtitle: 'Color ligero para tu rutina', price: 7000, image: '/images/makeup/01.png', label: 'MAQUILLAJE',
+    description: 'Tinta de acabado ligero para sumar un toque de color a tu look diario.', use: 'Aplica sobre labios o mejillas y difumina rápidamente para un resultado uniforme.', notes: ['Acabado ligero', 'Color fresco', 'Fácil de usar'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'rubor-flower', name: 'Rubor Flower', category: 'maquillaje', subtitle: 'Efecto 3D y acabado natural', price: 12000, image: '/images/makeup/00.png', label: 'MAQUILLAJE',
+    description: 'Rubor en polvo con efecto 3D para un acabado natural y luminoso.', use: 'Toma producto con una brocha, retira el exceso y aplica en las mejillas.', notes: ['Efecto 3D', 'Acabado natural', 'Polvo suave'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'lapiz-cejas-tres-puntas', name: 'Lápiz de cejas 3 puntas', category: 'maquillaje', subtitle: 'Cejas perfectas y naturales', price: 12000, image: '/images/makeup/12.png', label: 'MAQUILLAJE',
+    description: 'Lápiz de tres puntas para definir cejas con un aspecto natural.', use: 'Dibuja trazos cortos siguiendo la dirección del vello y peina para integrar el color.', notes: ['Tres puntas', 'Trazos naturales', 'Define y rellena'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'serum-pestanas', name: 'Serum para pestañas', category: 'maquillaje', subtitle: 'Revitaliza el área', price: 10000, image: '/images/makeup/20.png', label: 'MAQUILLAJE',
+    description: 'Contiene ácido hialurónico para revitalizar el área de las pestañas.', use: 'Aplica una cantidad pequeña sobre pestañas limpias, evitando el contacto directo con los ojos.', notes: ['Con ácido hialurónico', 'Revitaliza el área', 'Aplicador preciso'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'sellador-pecas', name: 'Sellador de pecas', category: 'maquillaje', subtitle: 'Estampa pecas en segundos', price: 8000, image: '/images/makeup/06.png', label: 'MAQUILLAJE',
+    description: 'Estampa pecas en segundos y resiste al agua.', use: 'Presiona suavemente el aplicador sobre la piel y deja secar antes de tocar.', notes: ['Resistente al agua', 'Aplicación rápida', 'Resultado natural'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'base-acabado-mate', name: 'Base con acabado mate', category: 'maquillaje', subtitle: 'Incluye aplicador en forma de hongo', price: 15000, image: '/images/makeup/17.png', label: 'MAQUILLAJE',
+    description: 'Base de acabado mate con aplicador en forma de hongo.', use: 'Aplica por zonas y difumina desde el centro del rostro hacia afuera.', notes: ['Acabado mate', 'Incluye aplicador', 'Cobertura modulable'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'labial-liquido-mate', name: 'Labial líquido mate', category: 'maquillaje', subtitle: 'Larga duración, hasta 16 horas', price: 8000, image: '/images/makeup/09.png', label: 'MAQUILLAJE',
+    description: 'Labial líquido mate de larga duración, hasta 16 horas.', use: 'Aplica sobre labios limpios y espera unos segundos mientras fija el acabado.', notes: ['Mate', 'Larga duración', 'Color intenso'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'crema-fijadora-maquillaje', name: 'Crema fijadora de maquillaje', category: 'maquillaje', subtitle: 'Sella el corrector y la base', price: 12000, image: '/images/makeup/04.png', label: 'MAQUILLAJE',
+    description: 'Sella el corrector y la base, proporcionando un efecto mate.', use: 'Aplica una capa fina después de tu base o corrector y difumina de manera uniforme.', notes: ['Efecto mate', 'Fija tu maquillaje', 'Textura cremosa'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'balsamo-frutal', name: 'Bálsamo frutal', category: 'maquillaje', subtitle: 'Hidrata y suaviza los labios', price: 5000, image: '/images/makeup/05.png', label: 'MAQUILLAJE',
+    description: 'Bálsamo frutal que hidrata profundamente y suaviza los labios.', use: 'Aplica directamente sobre los labios cada vez que necesites hidratación.', notes: ['Aroma frutal', 'Hidratación profunda', 'Suaviza los labios'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'lapiz-labial-hidratante', name: 'Lápiz labial hidratante', category: 'maquillaje', subtitle: 'Color y cuidado en un solo paso', price: 5000, image: '/images/makeup/11.png', label: 'MAQUILLAJE',
+    description: 'Lápiz labial hidratante para aportar color mientras cuida tus labios.', use: 'Desliza sobre los labios y reaplica cuando quieras intensificar el tono.', notes: ['Hidratante', 'Color suave', 'Aplicación fácil'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'labial-hidratante-frutas', name: 'Labial hidratante de frutas', category: 'maquillaje', subtitle: 'Un toque dulce de color', price: 5000, image: '/images/makeup/03.png', label: 'MAQUILLAJE',
+    description: 'Labial hidratante con inspiración frutal para un toque dulce de color.', use: 'Aplica sobre los labios limpios y reaplica durante el día según necesites.', notes: ['Inspiración frutal', 'Hidratación', 'Color cotidiano'], options: [{ label: '1 unidad', extra: 0 }],
+  },
+  {
+    id: 'gloss-labial', name: 'Gloss', category: 'maquillaje', subtitle: 'Brillo suave para tus labios', price: 8000, image: '/images/makeup/07.png', label: 'MAQUILLAJE',
+    description: 'Brillo labial de acabado brillante que suaviza e hidrata los labios.', use: 'Aplica directamente o encima de tu labial favorito para sumar brillo.', notes: ['Acabado brillante', 'Suaviza e hidrata', 'Úsalo solo o en capas'], options: [{ label: '1 unidad', extra: 0 }],
   },
 ];
 export interface CartItem {

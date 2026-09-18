@@ -334,7 +334,7 @@ function Header() {
           >
             Todos los productos
           </Link>
-          {categories.slice(0, 3).map((c) => (
+          {categories.map((c) => (
             <Link
               className={pathname === categoryUrl(c.id) ? 'current' : ''}
               key={c.id}
@@ -505,6 +505,8 @@ function Footer() {
           <Link href="/ayuda">Preguntas frecuentes</Link>
           <Link href="/envios">Envíos y pedidos</Link>
           <Link href="/contacto">Hablemos</Link>
+          <a href={`https://wa.me/${shop.whatsappNumber}`} target="_blank" rel="noopener noreferrer">WhatsApp · 318 555 5731</a>
+          <a href="https://instagram.com/lvkarecuidadoancestral" target="_blank" rel="noopener noreferrer">Instagram · @lvkarecuidadoancestral</a>
         </div>
         <div className="footer-message">
           <Flower2 size={33} strokeWidth={1} />

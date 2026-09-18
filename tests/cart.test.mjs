@@ -86,7 +86,7 @@ test('WhatsApp includes every line, selected size, quantity, subtotal and custom
   assert.match(message, /Envío: por confirmar/);
   const url = new URL(whatsappUrl(message));
   assert.equal(url.origin, 'https://wa.me');
-  assert.equal(url.pathname, '/');
+  assert.equal(url.pathname, '/573185555731');
   assert.equal(url.searchParams.get('text'), message);
   assert.equal(url.searchParams.size, 1);
 });
